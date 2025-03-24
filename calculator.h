@@ -14,3 +14,13 @@ T division(T num1, T num2)
     return 0;
     return num1/num2;
 }
+
+template <typename T>
+T addition(T n1, T n2){
+	return n1+n2;
+}
+
+template <typename T>
+T substraction(T n1, T n2){
+	return n1-n2;
+}
