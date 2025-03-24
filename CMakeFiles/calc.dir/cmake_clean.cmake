@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/calc.dir/calculator.cpp.o"
   "CMakeFiles/calc.dir/calculator.cpp.o.d"
-  "calc"
-  "calc.pdb"
+  "libcalc.a"
+  "libcalc.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
