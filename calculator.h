@@ -12,3 +12,15 @@ T addition(T n1, T n2);
 
 template <typename T>
 T substraction(T n1, T n2);
+
+template<typename T>
+T factorial(T n1, n2);
+
+template<typename T>
+T GCD(T n1, n2);
+
+template<typename T>
+T LCM(T n1, n2);
+
+template<typename T>
+T randomInRange(T n1, n2);
