@@ -12,7 +12,7 @@ template <typename T>
 T division(T num1, T num2){
 	if(num2==0)
 		return 0;
-	return n1/n2;
+	return num1/num2;
 
 }
 
