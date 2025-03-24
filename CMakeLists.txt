@@ -4,4 +4,4 @@ set( SOURCE_FILES
 calculator.h
 calculator.cpp
 )
-add_executable(calc ${SOURCE_FILES})
+add_library(calc STATIC ${SOURCE_FILES})
