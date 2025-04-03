@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <cctype>
+#include <cmath>
 #include "calculator.h"
 using namespace std;
 
@@ -60,4 +63,97 @@ int randomInRange(int min, int max) {
 
     return rand() % (max - min + 1) + min;
 }
+
+class Parser {
+    string expr;
+    size_t pos;
+
+    char peek() {
+        return pos < expr.length() ? expr[pos] : '\0';
+    }
+
+    char get() {
+        return expr[pos++];
+    }
+
+    void skipWhitespace() {
+        while (isspace(peek())) get();
+    }
+
+    double parseNumber() {
+        skipWhitespace();
+        string number;
+        while (isdigit(peek()) || peek() == '.') {
+            number += get();
+        }
+        return stod(number);
+    }
+
+    double parseFactor();
+
+    double parseBase() {
+        skipWhitespace();
+        if (peek() == '(') {
+            get();
+            double value = parseExpr();
+            get();
+            return value;
+        } else {
+            return parseNumber();
+        }
+    }
+
+    double parseFactor() {
+        double base = parseBase();
+        skipWhitespace();
+        if (peek() == '^') {
+            get();
+            return pow(base, parseFactor());
+        }
+        return base;
+    }
+
+    double parseTerm() {
+        double value = parseFactor();
+        while (true) {
+            skipWhitespace();
+            char op = peek();
+            if (op == '*' || op == '/') {
+                get();
+                double rhs = parseFactor();
+                value = (op == '*') ? value * rhs : value / rhs;
+            } else break;
+        }
+        return value;
+    }
+
+    double parseExpr() {
+        double value = parseTerm();
+        while (true) {
+            skipWhitespace();
+            char op = peek();
+            if (op == '+' || op == '-') {
+                get();
+                double rhs = parseTerm();
+                value = (op == '+') ? value + rhs : value - rhs;
+            } else break;
+        }
+        return value;
+    }
+
+public:
+    double parse(const string& input) {
+        expr = input;
+        pos = 0;
+        return parseExpr();
+    }
+};
+
+
+double calcExpression(string expression){
+    Parser parser;
+    return parser.parse(expression);
+
+}
+
 
