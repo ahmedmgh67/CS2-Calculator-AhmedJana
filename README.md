@@ -1,6 +1,6 @@
 # 🧮 C++ Calculator Library
 
-A simple, header-based C++ library providing mathematical operations including +-\*/, factorial, GCD, LCM, and random number generation.
+A simple, header-based C++ library providing mathematical operations including +-\*/, factorial, GCD, LCM, random number generation and simple mathematical expression parsing.
 
 ---
 
@@ -10,24 +10,23 @@ A simple, header-based C++ library providing mathematical operations including +
 - ➖ `subtraction(a, b)` – Subtract two integers
 - ✖️ `multiplication(a, b)` – Multiply two integers
 - ➗ `division(a, b)` – Divide two integers (returns a `double`)
-- 🧮 `factorial(n)` – Compute factorial of an integer
-- 🧩 `gcd(a, b)` – Compute Greatest Common Divisor
-- 🧮 `lcm(a, b)` – Compute Least Common Multiple
-- 🎲 `randomInRange(min, max)` – Generate random integer in a given range
+- 🧮 `factorial(int n)` – Compute factorial of an integer
+- 🧩 `gcd(int a, int b)` – Compute Greatest Common Divisor
+- 🧮 `lcm(int a, int b)` – Compute Least Common Multiple
+- 🎲 `randomInRange(int min, int max)` – Generate random integer in a given range
+- 🧮 `calcExpression(string expression)` – Calculates value of simple mathemetaical expressions
 
 ---
 
 ## 📁 File Structure
 
-calculator-lib/
+CS2-Calculator-AhmedJana/
 ├── calculator.h       # Function declarations
 ├── calculator.cpp     # Function implementations
 ├── CMakeLists.txt     # Build system file (optional)
-└── example/
-└── main.cpp   # Example usage
+└── test.cpp   # Example usage
 
 
 ## Build Commands
 
-cmake .
-make
+cmake --build .
