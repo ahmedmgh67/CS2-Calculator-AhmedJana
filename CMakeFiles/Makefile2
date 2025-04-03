@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana
 
 # The main recursive "all" target.
 all: CMakeFiles/calc.dir/all
+all: CMakeFiles/testApp.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/calc.dir/codegen
+codegen: CMakeFiles/testApp.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/calc.dir/clean
+clean: CMakeFiles/testApp.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,6 +112,38 @@ CMakeFiles/calc.dir/codegen:
 CMakeFiles/calc.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/clean
 .PHONY : CMakeFiles/calc.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testApp.dir
+
+# All Build rule for target.
+CMakeFiles/testApp.dir/all: CMakeFiles/calc.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles --progress-num=3,4 "Built target testApp"
+.PHONY : CMakeFiles/testApp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testApp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testApp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles 0
+.PHONY : CMakeFiles/testApp.dir/rule
+
+# Convenience name for target.
+testApp: CMakeFiles/testApp.dir/rule
+.PHONY : testApp
+
+# codegen rule for target.
+CMakeFiles/testApp.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles --progress-num=3,4 "Finished codegen for target testApp"
+.PHONY : CMakeFiles/testApp.dir/codegen
+
+# clean rule for target.
+CMakeFiles/testApp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/clean
+.PHONY : CMakeFiles/testApp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

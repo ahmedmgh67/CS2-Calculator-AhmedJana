@@ -129,6 +129,19 @@ calc/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/build
 .PHONY : calc/fast
 
+#=============================================================================
+# Target rules for targets named testApp
+
+# Build rule for target.
+testApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testApp
+.PHONY : testApp
+
+# fast build rule for target.
+testApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/build
+.PHONY : testApp/fast
+
 calculator.o: calculator.cpp.o
 .PHONY : calculator.o
 
@@ -153,6 +166,30 @@ calculator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/calculator.cpp.s
 .PHONY : calculator.cpp.s
 
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testApp.dir/build.make CMakeFiles/testApp.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... calc"
+	@echo "... testApp"
 	@echo "... calculator.o"
 	@echo "... calculator.i"
 	@echo "... calculator.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

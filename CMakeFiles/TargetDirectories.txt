@@ -1,3 +1,4 @@
 /Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles/calc.dir
+/Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles/testApp.dir
 /Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles/edit_cache.dir
 /Users/ahmedgamal/Documents/CS2-Calculator-AhmedJana/CMakeFiles/rebuild_cache.dir

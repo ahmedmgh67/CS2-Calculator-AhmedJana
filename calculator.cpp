@@ -89,8 +89,6 @@ class Parser {
         return stod(number);
     }
 
-    double parseFactor();
-
     double parseBase() {
         skipWhitespace();
         if (peek() == '(') {
